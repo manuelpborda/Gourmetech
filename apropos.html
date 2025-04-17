@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos</title>
+    <link rel="stylesheet" href="apropos.css">
+</head>
+
+<body>
+<header>
+    <h1>Recettes Gourmandes - A propos</h1>
+    <img src="photos/logo.png" alt="logo"width="80">
+
+    <nav>
+    <a href="index.html">Retour a la page d'accueil</a>
+    <a href="recettes.html"> Retour a la page recettes</a>
+    </nav>
+</header>
+   <main>
+    <section id="site-info">
+        <h1>A propos de notre site</h1>
+        <p>Bienvenue sur notre site! Nous proposons un espace d'echange ainsi que des ressources .</p>
+    </section>
+    <section class="contact">
+        <h2>Contactez-nous</h2>
+        <form class="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+            <p id="form-message" class="hidden"></p>
+        </form>
+    </section>
+    <section id="faq">
+        <h2>Foire aux questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">Comment fonctionne ce site ?</button>
+            <div class="faq-answer">
+                <p>Le site vous permet de consulter des articles, de poser vos questions et de participer aux discussions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Puis-je contribuer ?</button>
+            <div class="faq-answer">
+                <p>Oui, vous pouvez soumettre des articles ou répondre aux questions dans les forums après inscription.</p>
+            </div>
+        </div>
+       
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Recettes Gourmandes. Tous droits réservés.</p>
+</footer>
+
+<script src="apropos.js"></script>
+</body>
+</html>
