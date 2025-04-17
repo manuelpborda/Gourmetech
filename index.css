@@ -8,14 +8,14 @@ body {
 
 h1  {
     margin: 0;
-    color: orangered;
+    color: rgb(255, 255, 255);
     margin-right: 60%;
   
 }
 
 /*  En-tête  */
 header {
-    background-color: #ffffff;
+    background-color: orangered;
     border-bottom: 2px solid #ddd;
     padding: 10px 20px;
     
@@ -67,13 +67,20 @@ nav a:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-#search-bar {
+#search-bar - (search-button) {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 6px;
+
 }
+#search-button{
+    background-color: #f7941e;
+    
+}
+
+
 
 .filtres {
     display: flex;
@@ -135,7 +142,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* === Étiquettes (badges) === */
+/* Étiquettes (badges)  */
 .recette p span {
     display: inline-block;
     padding: 5px 10px;
@@ -145,48 +152,41 @@ nav a:hover {
     margin-right: 5px;
 }
 
-.recette p span.dessert {
-    background-color: #f05a28;
-}
 
-.recette p span.plat {
-    background-color: #f7941e;
-}
 
-.recette p span.entree {
-    background-color: #5aaf4b;
-}
-
-.recette p span.facile {
-    background-color: #4da6ff;
-}
-
-.recette p span.moyenne {
-    background-color: #ffd633;
-}
-
-.recette p span.difficile {
-    background-color: #e60000;
-}
-
-/* === Pied de page === */
+/*  Pied de page  */
 footer {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
+    background-color: orangered;
+    padding: 8px;
+    margin-top: 7PX;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    
 }
-
+.a-propos {
+    color: #ffffff;
+    width: 100% ;
+    font-weight: bold;
+    margin-left: 50%;
+    
+   
+}
+.text-a-propos {
+    color: #f7dcdc;
+    font-weight: bold;
+    font-size: 18px;
+}
 footer ul {
     list-style: none;
-    padding: 0;
+    
+    
 }
 
 footer li {
-    margin-bottom: 5px;
+    
+    color: white;
+    
+    
 }
 
 footer a {
@@ -194,14 +194,10 @@ footer a {
     color: #555;
 }
 
-footer a:hover {
-    color: #f7941e;
-}
 
 footer p {
     width: 100%;
     text-align: center;
-    margin-top: 20px;
-    color: #aaa;
+    color: #000000;
     font-size: 13px;
 }
