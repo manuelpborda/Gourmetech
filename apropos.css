@@ -1,4 +1,4 @@
-header {
+ header {
     background-color: orangered;
     padding: 20px;
     display: flex;
@@ -8,7 +8,7 @@ header {
     position: relative;
   }
 
-  header h1 {
+ header h1 {
     margin: 0 auto;
     font-size: 28px;
     color: white;
@@ -16,68 +16,73 @@ header {
     width: 100%;
   }
 
-  header img {
+ header img {
     position: absolute;
     left: 20px;
     top: 10%;
   }
   
 
-  nav {
+ nav {
     width: 100%;
     text-align: center;
     margin-top: 10px;
   }
   
-  nav a {
+ nav a {
     margin: 0 10px;
     color: white;
     text-decoration: none;
     font-weight: bold;
   }
 
-  nav a:hover {
+ nav a:hover {
     text-decoration: underline;
   }
 
 
-body {
+ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background: #fff;
     color: #000;
-}
+ }
 
-main {
+ main {
     max-width: 800px;
     margin: auto;
-}
+ }
 
-h1, h2 {
+ h1, h2 {
     color: orangered;
     margin-top: 20px;
     margin-bottom: 10px;
-}
+ }
 
-label {
+ label {
     display: block;
     margin-top: 10px;
-}
+ }
 
-input, textarea {
+
+ input, textarea {
     width: 100%;
     padding: 5px;
     margin-top: 5px;
-}
+ }
 
-button {
+ button {
     margin-top: 10px;
     padding: 5px 10px;
-}
+ }
+
+ button:hover {
+    background-color: orangered;
+ }
 
 
-.faq-question {
+ .faq-question {
     margin-top: 15px;
     cursor: pointer;
     background: #eee;
@@ -85,15 +90,19 @@ button {
     padding: 10px;
     width: 100%;
     text-align: left;
-}
+ }
 
-.faq-answer {
+ .hidden {
+    display: none;
+ }
+
+ .faq-answer {
     padding: 10px;
     background: #f9f9f9;
     margin-top: 5px;
-}
+ }
 
-footer {
+ footer {
     text-align: center;
     padding: 30px;
     background-color: orangered;
