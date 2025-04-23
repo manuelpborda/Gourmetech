@@ -1,49 +1,44 @@
-/* === Général === */
+/* ================= GENERAL ================= */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
-    color: #141414;}
-    body.dark {
-        background-color: #121212;
-        color: #ffffff;
-      }
-      body.dark .info-recette{
-        box-shadow: 0 1px 12px rgba(255, 35, 35, 0.925)
-      }
-      body.dark .recette-image {
-        box-shadow: 0 10px 15px rgba(255, 225, 225, 0.671)
-      }
-      body.dark .tiramisu {
-        box-shadow: 0 1px 12px rgba(255, 35, 35, 0.925)
-      }
-      body.dark .Gratin {
-        box-shadow: 0 1px 12px rgba(255, 35, 35, 0.925)
-      }
-    
-      button {
-        padding: 0.5rem 1rem;
-        font-size: 0.7rem;
-        cursor: pointer;
-      }
+    color: #141414;
+}
 
+button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* ================= DARK MODE ================= */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark .info-recette,
+body.dark .tiramisu,
+body.dark .Gratin {
+    box-shadow: 0 1px 12px rgba(255, 35, 35, 0.925);
+}
+
+body.dark .recette-image {
+    box-shadow: 0 10px 15px rgba(255, 225, 225, 0.671);
+}
+
+/* ================= HEADER ================= */
 header {
     background-color: orangered;
     border-bottom: 2px solid #ddd;
     padding: 10px 20px;
-    
-}
-h1  {
-    margin: 0;
-    color: rgb(255, 255, 255);
-    margin-right: 60%; 
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .logo {
@@ -51,6 +46,13 @@ h1  {
     margin-right: 10px;
 }
 
+h1 {
+    margin: 0;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+/* ================= NAVIGATION ================= */
 nav ul {
     list-style: none;
     display: flex;
@@ -61,32 +63,22 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #555;
+    color: #ffffff;
     font-weight: bold;
 }
 
-
+/* ================= THÈME BUTTON ================= */
 #theme-toggle {
     font-size: 30px;
     background: none;
     border: none;
+    color: white;
     cursor: pointer;
 }
 
-
-/* === Grille de recettes === */
+/* ================= RECETTE DETAIL ================= */
 .recette-detail {
-    display: non;
     margin-left: 25px;
-}
-
-
-.info-recette {
-    width: 90%;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 11px 15px rgba(0, 0, 0, 0.3);
 }
 
 .recette-image {
@@ -96,58 +88,86 @@ nav a {
     border-radius: 10px;
 }
 
-.suggestions{
-
-    margin-left: 20px;
-margin-top: 100px;
-
+.info-recette {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 11px 15px rgba(0, 0, 0, 0.3);
 }
 
-/*  Pied de page  */
+/* ================= SUGGESTIONS ================= */
+.suggestions {
+    margin: 100px 20px 0 20px;
+}
+
+.grille-recettes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.recette {
+    width: 200px;
+    text-align: center;
+}
+
+.recette img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ================= FOOTER ================= */
 footer {
     background-color: orangered;
-    padding: 8px;
-    margin-top: 17PX;
+    padding: 20px;
+    margin-top: 30px;
     display: flex;
-    flex-wrap: wrap;
-    
-}
-.a-propos {
+    flex-direction: column;
+    align-items: center;
     color: #ffffff;
-    width: 100% ;
-    font-weight: bold;
-    margin-left: 80%;
-    
-   
 }
-.text-a-propos {
-    color: #0c0c0c;
-    font-weight: bold;
-    font-size: 18px;
-}
+
 footer ul {
     list-style: none;
-     
-    
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
 }
 
-footer > ul >li {
-    
-    color: white;
-   
-
-    
+footer ul li {
+    font-weight: bold;
 }
 
 footer a {
     text-decoration: none;
-    color: #555;
+    color: #ffffff;
+    transition: color 0.3s;
 }
 
+footer a:hover {
+    color: #000;
+}
+
+footer .a-propos {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .text-a-propos {
+    color: #fff9f9;
+    font-size: 16px;
+    font-weight: normal;
+}
 
 footer p {
     width: 100%;
     text-align: center;
-    color: #000000;
+    color: #ffffff;
     font-size: 13px;
+    margin-top: 10px;
 }
