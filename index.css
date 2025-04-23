@@ -4,7 +4,33 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     color: #141414;
+    
+     }
+     body.dark {
+        background-color: #121212;
+        color: #ffffff;
+
+      }
+      body.dark .recette {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ddd;
+        box-shadow: 0 2px 8px rgba(247, 243, 243, 0.945);
+      }
+      body.dark .recherche-filtrage {
+        background-color: rgb(0, 0, 0);
+    
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(250, 5, 5, 0.822);
+
 }
+      
+  
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 0.5rem;
+        cursor: pointer;
+      }
+
 
 h1  {
     margin: 0;
@@ -62,19 +88,20 @@ nav a:hover {
 .recherche-filtrage {
     background-color: white;
     padding: 20px;
-    margin: 20px;
+    margin: 6px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,1.1);
 }
 
-#search-bar - (search-button) {
-    width: 100%;
+#search-bar  {
+    width: 80%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 16px;
 
 }
+
 #search-button{
     background-color: #f7941e;
     
@@ -158,42 +185,42 @@ nav a:hover {
 footer {
     background-color: orangered;
     padding: 8px;
-    margin-top: 7PX;
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 17px; 
     
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+} 
+.p {
+    width: 30rem;
 }
 .a-propos {
     color: #ffffff;
     width: 100% ;
     font-weight: bold;
-    margin-left: 50%;
+    /*margin-left: 80%; */
     
    
 }
 .text-a-propos {
-    color: #f7dcdc;
+    color: #0c0c0c;
     font-weight: bold;
     font-size: 18px;
 }
 footer ul {
     list-style: none;
-    
+     
     
 }
 
-footer li {
+footer ul li a {
     
     color: white;
-    
+   
+
     
 }
-
-footer a {
-    text-decoration: none;
-    color: #555;
-}
-
 
 footer p {
     width: 100%;
