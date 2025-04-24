@@ -95,9 +95,10 @@ nav a:hover {
 }
 #message-recherche { 
     text-align: center;
+    font-style: italic;
      font-weight: bold; 
      color: rgb(255, 0, 0); 
-     margin-top: 10px;
+     margin-top: 59px;
 }
 
 #search-bar {
@@ -194,6 +195,11 @@ nav a:hover {
 .recetteAleatoire {
     
     padding: 50px;
+    margin-top: 15%;
+               height: 50px;
+               width: 250px;
+               border-radius: 20px;
+               cursor: pointer;
 }
 
 /* ================= FOOTER ================= */

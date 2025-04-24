@@ -77,6 +77,8 @@ const btn = document.getElementById("theme-toggle");
 });
 
 
-// -------------------- filtres manuelment -------------------------------//
+// -------------------- recettes Aleatoires -------------------------------//
 
-const filtres = document.getElementById(".filtres");{ }
+const recettesAleatoires = document.getElementById(".filtres");{
+  
+ }
