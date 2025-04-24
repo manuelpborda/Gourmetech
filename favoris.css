@@ -1,0 +1,139 @@
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded #loader {
+  opacity: 0;
+  pointer-events: none;
+}
+
+header {
+  background-color: orangered;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header h1 {
+  margin: 0 auto;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+
+header img {
+  position: absolute;
+  left: 20px;
+  top: 10%;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+.favorites {
+  padding: 20px;
+}
+
+#favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+
+#favorites-list > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 220px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#favorites-list h3 {
+  height: 50px; /* ou ajuste selon la taille moyenne */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+#favorites-list img {
+  width: 250px;
+  border-radius: 5px;
+}
+
+#no-favorites-message {
+  color: #888;
+  font-style: italic;
+  margin-top: 20px;
+  text-align: center; 
+}
+.btn-recette {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #ff7043; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-recette:hover {
+  background-color: #e64a19; 
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: orangered;
+  color: white;
+  margin-top: 120px;
+}
