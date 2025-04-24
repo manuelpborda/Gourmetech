@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
 // Cibler les éléments HTML
 const favoritesList = document.getElementById('favorites-list');
 const noFavoritesMessage = document.getElementById('no-favorites-message');

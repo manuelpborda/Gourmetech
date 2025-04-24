@@ -1,47 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // === FAQ : afficher/masquer les réponses ===
-    const faqQuestions = document.querySelectorAll(".faq-question");
-
-    faqQuestions.forEach(question => {
-        question.addEventListener("click", () => {
-            const answer = question.nextElementSibling;
-            answer.classList.toggle("visible");
-        });
-    });
-
-    // === Formulaire : gestion de l'envoi et sauvegarde localStorage ===
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+  
+document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".contact-form");
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const message = document.getElementById("message");
     const formMessage = document.getElementById("form-message");
 
-    // Charger les données sauvegardées
-    const savedData = localStorage.getItem("contactForm");
-    if (savedData) {
-        const data = JSON.parse(savedData);
-        name.value = data.name || "";
-        email.value = data.email || "";
-        message.value = data.message || "";
-    }
-
-    // Sauvegarder les données à chaque saisie
-    [name, email, message].forEach(input => {
-        input.addEventListener("input", () => {
-            localStorage.setItem("contactForm", JSON.stringify({
-                name: name.value,
-                email: email.value,
-                message: message.value
-            }));
-        });
-    });
-
-    // Soumission du formulaire
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        if (!name || !email || !message) {
+            formMessage.textContent = "Veuillez remplir tous les champs.";
+            formMessage.classList.remove("hidden");
+            formMessage.style.color = "red";
+            return;
+        }
+
+        // Si tout est bon
         formMessage.textContent = "Merci pour votre message !";
         formMessage.classList.remove("hidden");
+        formMessage.style.color = "green";
         form.reset();
-        localStorage.removeItem("contactForm");
     });
 });
+
+    document.querySelectorAll(".faq-question").forEach(button => {
+        button.addEventListener("click", () => {
+            const answer = button.nextElementSibling;
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+    
+            button.setAttribute("aria-expanded", !isExpanded);
+            answer.style.display = isExpanded ? "none" : "block";
+        });
+    
+        // Accessibilité initiale
+        button.setAttribute("aria-expanded", "false");
+    });
