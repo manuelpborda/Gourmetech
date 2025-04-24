@@ -14,10 +14,10 @@ const btn = document.getElementById("theme-toggle");
       // Mémorise le thème actuel
       if (body.classList.contains("dark")) {
         localStorage.setItem("theme", "dark");
-        btn.textContent = "Activer le mode clair";
+        btn.textContent = "☀️Light";
       } else {
         localStorage.setItem("theme", "light");
-        btn.textContent = "Activer le mode sombre";
+        btn.textContent = "🌙 Dark";
       }
     });
     window.onload = () => {

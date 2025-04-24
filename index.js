@@ -16,10 +16,10 @@ const btn = document.getElementById("theme-toggle");
       // Mémorise le thème actuel
       if (body.classList.contains("dark")) {
         localStorage.setItem("theme", "dark");
-        btn.textContent = "☀️";
+        btn.textContent = "☀️Light";
       } else {
         localStorage.setItem("theme", "light");
-        btn.textContent = "Activer le mode sombre";
+        btn.textContent = "🌙 Dark";
       }
     });
     window.onload = () => {
@@ -36,30 +36,47 @@ const btn = document.getElementById("theme-toggle");
   const searchInput = document.getElementById("search-bar");
   const searchButton = document.getElementById("search-button");
   const recettes = document.querySelectorAll(".recette");
+  const messageRecherche = document.getElementById("message-recherche");
 
-  // Función para filtrar recetas
+  // Functión   filtre des recettes
   function filtrerRecettes() {
-      const terme = searchInput.value.toLowerCase(); // Convertir a minúsculas para búsqueda insensible
+      const mot = searchInput.value.toLowerCase();
+      let resultatTrouve=false;
+      
+      
       recettes.forEach(recette => {
-          const titre = recette.querySelector("h3").textContent.toLowerCase();
-          if (titre.includes(terme)) {
-              recette.style.display = "flex"; mostrar
+          const titreRecette = recette.querySelector("h3").textContent.toLowerCase();
+          if (titreRecette.includes(mot)) {
+              recette.style.display = "flex";// mostrar
+              resultatTrouve = true;
           } else {
               recette.style.display = "none"; // ocultar
           }
       });
+
+      if (mot !== "" && !resultatTrouve) {
+        messageRecherche.textContent = " !Aucune recette disponible pour cette recherche.";
+    }
+     
+    else {
+        messageRecherche.textContent = " ";
+    }
   }
 
-  // Evento al hacer clic en el botón
+  // un event pour faire click au button
   searchButton.addEventListener("click", filtrerRecettes);
 
-  // También puedes activar búsqueda con "Enter"
+  //event pour chercher avec le clavier entrée
   searchInput.addEventListener("keyup", function (event) {
       if (event.key === "Enter") {
           filtrerRecettes();
+          
       }
   });
+  
 });
 
 
-//
+// -------------------- filtres manuelment -------------------------------//
+
+const filtres = document.getElementById(".filtres");{ }
