@@ -11,7 +11,7 @@
 
 <header>
     <div class="header-container">
-        <img src="Assets/icons/logo.png" alt="Logo GourmeTech" class="logo" >
+        <img src="images/logo.png" alt="Logo GourmeTech" class="logo" >
         <h1>GourmeTech</h1>
         <nav>
             <ul class="nav-links">
@@ -31,21 +31,21 @@
     
     <div class="filtres">
         <select>
-            <option value="">Catégorie</option>
+            <option class="Catégorie" value="">Catégorie</option>
             <option value="entree">Entrée</option>
             <option value="plat">Plat</option>
             <option value="dessert">Dessert</option>
         </select>
 
         <select>
-            <option value="">Temps de préparation</option>
+            <option class="temsPrepa" value="">Temps de préparation</option>
             <option value="-15">Moins de 15 min</option>
             <option value="15-30">15-30 min</option>
             <option value="30+">Plus de 30 min</option>
         </select>
 
         <select>
-            <option value="">Difficulté</option>
+            <option class="difficulté" value="">Difficulté</option>
             <option value="facile">Facile</option>
             <option value="moyenne">Moyenne</option>
             <option value="difficile">Difficile</option>
@@ -53,9 +53,11 @@
     </div>
 </section>
 
+<div id="message-recherche"></div>
+
 <main class="grille-recettes">
     <div class="recette">
-        <img src="Assets/Images/Gratin-Dauphinois.jpg" alt="Recette 1">
+        <img src="Images/Gratin-Dauphinois.jpg" alt="Recette 1">
         <h3>Gratin -Dauphinois</h3>
         <p>Catégorie: Plat</p>
         <p>Temps: 45 min</p>
@@ -64,7 +66,7 @@
         <button class="favori-btn">❤️</button> 
     </div>
     <div class="recette">
-        <img src="Assets/Images/tarte_aux_pommes.jpg" alt= "Recette 2">
+        <img src="Images/tarte_aux_pommes.jpg" alt= "Recette 2">
         <h3>Tarte Aux Pommes</h3>
         <p> Catégorie: Dessert</p>
         <p>Temps: 30 min</p>
@@ -72,14 +74,18 @@
         <button class="favori-btn">❤️</button>
     </div>
     <div class="recette">
-        <img src="Assets/Images/lasagne.jpg" alt="Recette 3">
+        <img src="Images/lasagne-.jpg" alt="Recette 3">
         <h3>lasagne</h3>
         <p>Catégorie: plat</p>
         <p>Temps: 30 min</p>
         <p>Difficulté: Facile</p>
         <button class="favori-btn">❤️</button>
     </div>
-  
+      
+   <div class="recetteAleatoire"> 
+      <a href="recettes_Aleatoires.html" target="_blank">recettes Aleatoires</a>
+   </div>
+
 </main>
 
 <footer>
@@ -102,6 +108,9 @@
     </div>
 
     <p>&copy; 2025 GourmeTech. Tous droits réservés.</p>
+    
+    
+
 </footer>
 
 <script src="index.js"></script>

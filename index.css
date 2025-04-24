@@ -1,57 +1,47 @@
-/* === Général === */
+/* ================= GENERAL ================= */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     color: #141414;
-    
-     }
-     body.dark {
-        background-color: #121212;
-        color: #ffffff;
-
-      }
-      body.dark .recette {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #ddd;
-        box-shadow: 0 2px 8px rgba(247, 243, 243, 0.945);
-      }
-      body.dark .recherche-filtrage {
-        background-color: rgb(0, 0, 0);
-    
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(250, 5, 5, 0.822);
-
-}
-      
-  
-      button {
-        padding: 0.5rem 1rem;
-        font-size: 0.5rem;
-        cursor: pointer;
-      }
-
-
-h1  {
-    margin: 0;
-    color: rgb(255, 255, 255);
-    margin-right: 60%;
-  
 }
 
-/*  En-tête  */
+button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* ================= DARK MODE ================= */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark .recette {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    box-shadow: 0 2px 8px rgba(247, 243, 243, 0.945);
+}
+
+body.dark .recherche-filtrage {
+    background-color: #000;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 6px rgba(250, 5, 5, 0.822);
+}
+
+/* ================= HEADER ================= */
 header {
     background-color: orangered;
     border-bottom: 2px solid #ddd;
     padding: 10px 20px;
-    
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .logo {
@@ -59,6 +49,13 @@ header {
     margin-right: 10px;
 }
 
+h1 {
+    margin: 0;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+/* ================= NAVIGATION ================= */
 nav ul {
     list-style: none;
     display: flex;
@@ -69,50 +66,66 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #555;
+    color: #ffffff;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #f7941e;
+    color: #000;
 }
 
+/* ================= THÈME BUTTON ================= */
 #theme-toggle {
     font-size: 30px;
     background: none;
     border: none;
+    color: white;
     cursor: pointer;
 }
 
-/*  Section recherche et filtres  */
+/* ================= SECTION RECHERCHE ================= */
 .recherche-filtrage {
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
-    margin: 6px;
+    margin: 10px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,1.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+#message-recherche { 
+    text-align: center;
+    font-style: italic;
+     font-weight: bold; 
+     color: rgb(255, 0, 0); 
+     margin-top: 59px;
 }
 
-#search-bar  {
-    width: 80%;
+#search-bar {
+    width: 70%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 16px;
-
 }
 
-#search-button{
+#search-button {
     background-color: #f7941e;
-    
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
-
-
+/* ================= FILTRES ================= */
 .filtres {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .filtres select {
@@ -121,28 +134,53 @@ nav a:hover {
     border-radius: 6px;
 }
 
-/* === Grille de recettes === */
+/* ================= GRILLE DE RECETTES ================= */
 .grille-recettes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .recette {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: relative;
     gap: 10px;
 }
 
 .recette img {
-    width: 60%;
+    width: 100%;
+    max-width: 200px;
     border-radius: 10px;
+}
+
+.recette h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.recette p {
+    margin: 4px 0;
+    text-align: center;
+}
+
+.recette button {
+    background-color: #f7941e;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .favori-btn {
@@ -154,77 +192,70 @@ nav a:hover {
     font-size: 20px;
     cursor: pointer;
 }
-
-.recette p {
-    margin: 4px 0;
+.recetteAleatoire {
+    
+    padding: 50px;
+    margin-top: 15%;
+               height: 50px;
+               width: 250px;
+               border-radius: 20px;
+               cursor: pointer;
 }
 
-.recette button {
-    background-color: #f7941e;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Étiquettes (badges)  */
-.recette p span {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    color: white;
-    margin-right: 5px;
-}
-
-
-
-/*  Pied de page  */
+/* ================= FOOTER ================= */
 footer {
     background-color: orangered;
-    padding: 8px;
-    margin-top: 17px; 
-    
+    padding: 1px 5px ;
+    color: white;
+    text-align: center;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
 }
-.footer{
+
+.footer {
     display: flex;
-    justify-content: space-around;
-} 
-.p {
-    width: 30rem;
-}
-.a-propos {
-    color: #ffffff;
-    width: 100% ;
-    font-weight: bold;
-    /*margin-left: 80%; */
-    
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
    
 }
-.text-a-propos {
-    color: #0c0c0c;
-    font-weight: bold;
-    font-size: 18px;
-}
+
 footer ul {
     list-style: none;
-     
-    
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3;
+    font-style: italic;
 }
 
 footer ul li a {
-    
+    text-decoration: none;
     color: white;
-   
-
-    
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-footer p {
-    width: 100%;
-    text-align: center;
+footer ul li a:hover {
     color: #000000;
+}
+
+.a-propos {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.text-a-propos {
+    color: #f1f1f1;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+footer > p {
     font-size: 13px;
+    color: #ffffff;
+    margin-top: 20px;
 }
