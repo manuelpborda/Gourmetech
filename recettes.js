@@ -14,17 +14,10 @@ const btn = document.getElementById("theme-toggle");
       // Mémorise le thème actuel
       if (body.classList.contains("dark")) {
         localStorage.setItem("theme", "dark");
-<<<<<<< HEAD
         btn.textContent = "Activer le mode clair";
       } else {
         localStorage.setItem("theme", "light");
         btn.textContent = "Activer le mode sombre";
-=======
-        btn.textContent = "☀️Light";
-      } else {
-        localStorage.setItem("theme", "light");
-        btn.textContent = "🌙 Dark";
->>>>>>> manuelpborda
       }
     });
     window.onload = () => {
@@ -32,8 +25,4 @@ const btn = document.getElementById("theme-toggle");
       if (savedTheme) {
         body.classList.toggle("dark", savedTheme === "dark");
       }
-<<<<<<< HEAD
     };
-=======
-    };
->>>>>>> manuelpborda
