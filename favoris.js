@@ -2,27 +2,6 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-  // Vérifier si un thème est déjà stocké dans le localStorage
-const themeToggleButton = document.getElementById('theme-toggle');
-
-// Charger le thème stocké dans le localStorage au démarrage
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
-}
-
-// Fonction de bascule entre les modes
-themeToggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-
-    // Sauvegarder l'état du thème dans le localStorage
-    if (document.body.classList.contains('dark-theme')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
-    }
-});
-
-
 // Cibler les éléments HTML
 const favoritesList = document.getElementById('favorites-list');
 const noFavoritesMessage = document.getElementById('no-favorites-message');

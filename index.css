@@ -3,6 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#loader {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     background-color: #fff;
+     color: #333;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2em;
+      z-index: 9999;
+     transition: opacity 0.5s ease;
+    }
+    body.loaded #loader {
+     opacity:0;
+     pointer-events: none;
+    }
 /* ================= GENERAL ================= */
 body {
     margin: 0;
@@ -17,6 +37,24 @@ button {
     cursor: pointer;
 }
 
+/* ================= DARK MODE ================= */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark .recette {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    box-shadow: 0 2px 8px rgba(247, 243, 243, 0.945);
+}
+
+body.dark .recherche-filtrage {
+    background-color: #000;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 6px rgba(250, 5, 5, 0.822);
+}
 
 /* ================= HEADER ================= */
 header {
