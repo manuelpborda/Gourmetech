@@ -2,6 +2,18 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
   
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Optionnel : changer le texte du bouton
+      if (document.body.classList.contains('dark-mode')) {
+          toggleBtn.textContent = '☀️ Mode clair';
+      } else {
+          toggleBtn.textContent = '🌙 Mode sombre';
+      }
+  });
+  
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".contact-form");
     const formMessage = document.getElementById("form-message");

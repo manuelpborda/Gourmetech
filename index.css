@@ -1,3 +1,4 @@
+
 /* ================= GENERAL ================= */
 body {
     margin: 0;
@@ -213,49 +214,100 @@ footer {
     width: 100%;
 }
 
+footer {
+
+    background-color: orangered;
+
+    padding: 1px 5px ;
+
+    color: white;
+
+    text-align: center;
+
+    bottom: 0px;
+
+    position: fixed;
+
+    width: 100%;
+
+}
+
 .footer {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     gap: 20px;
+
    
+
 }
 
 footer ul {
+
     list-style: none;
+
     display: flex;
+
     gap: 20px;
+
     padding: 0;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
     margin: 3;
+
     font-style: italic;
+
 }
 
 footer ul li a {
+
     text-decoration: none;
+
     color: white;
+
     font-weight: bold;
+
     transition: color 0.3s;
+
 }
 
 footer ul li a:hover {
+
     color: #000000;
+
 }
 
 .a-propos {
+
     font-weight: bold;
+
     margin-bottom: 5px;
+
 }
 
 .text-a-propos {
+
     color: #f1f1f1;
+
     font-size: 16px;
+
     font-weight: normal;
+
 }
 
 footer > p {
+
     font-size: 13px;
+
     color: #ffffff;
+
     margin-top: 20px;
+
 }
