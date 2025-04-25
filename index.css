@@ -1,3 +1,28 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#loader {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     background-color: #fff;
+     color: #333;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2em;
+      z-index: 9999;
+     transition: opacity 0.5s ease;
+    }
+    body.loaded #loader {
+     opacity:0;
+     pointer-events: none;
+    }
 /* ================= GENERAL ================= */
 body {
     margin: 0;
