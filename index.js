@@ -77,8 +77,3 @@ const btn = document.getElementById("theme-toggle");
 });
 
 
-// -------------------- recettes Aleatoires -------------------------------//
-
-const recettesAleatoires = document.getElementById(".filtres");{
-  
- }
