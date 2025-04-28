@@ -44,3 +44,4 @@ document.addEventListener("DOMContentLoaded", function () {
         // Accessibilité initiale
         button.setAttribute("aria-expanded", "false");
     });
+ 

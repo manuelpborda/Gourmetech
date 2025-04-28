@@ -33,6 +33,10 @@
    color: white;
  }
  
+ body.dark .faq-answer{
+   color: white;
+ }
+ 
  header {
     background-color: orangered;
     padding: 20px;
@@ -118,17 +122,18 @@
 
 
  .faq-question {
-    background-color: transparent;
+    background-color:white;
     border: none;
     font-size: 1.1em;
-    color:white;
     cursor: pointer;
     text-align: left;
     padding: 8px 0;
+    color:black;
  }
 
  .hidden {
     display: none;
+  
  }
 
  .faq-answer {
@@ -136,8 +141,10 @@
     margin-top: 5px;
     padding-left: 10px;
     border-left: 2px solid #ccc;
-    color: white;
+    color:black;
  }
+
+
  footer {
     text-align: center;
     padding: 30px;
