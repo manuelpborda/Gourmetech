@@ -22,7 +22,7 @@
 
   .dark-mode-toggle {
    position: absolute;
-   bottom: 10px;
+   bottom: 55px;
    right: 10px;
    font-size: 24px;
    cursor: pointer;
@@ -32,14 +32,13 @@
    background-color: #121212;
    color: white;
  }
- 
+
  body.dark .faq-answer{
    color: white;
  }
  
  header {
     background-color: orangered;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,11 +47,13 @@
   }
 
  header h1 {
-    margin: 0 auto;
-    font-size: 28px;
+   
+    margin-left: 120px;
+    font-size: 35px;
     color: white;
-    text-align: center;
+    text-align: left;
     width: 100%;
+    
   }
 
  header img {
@@ -64,8 +65,9 @@
 
  nav {
     width: 100%;
-    text-align: center;
+    text-align: right;
     margin-top: 10px;
+    transform: translateX(-30px)
   }
   
  nav a {
@@ -73,6 +75,9 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    top: -40px;
+    
   }
 
  nav a:hover {
@@ -146,9 +151,59 @@
 
 
  footer {
-    text-align: center;
-    padding: 30px;
-    background-color: orangered;
-    color: white;
-    margin-top: 220px;
-  }
+   background-color: orangered;
+   padding: 1px 5px ;
+   color: white;
+   text-align: center;
+   bottom: 0px;
+   position: fixed;
+   width: 100%;
+   margin-top: 45px;
+ }
+ 
+ footer ul {
+ list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+ }
+ 
+ footer ul li {
+   font-weight: bold;
+ 
+   font-weight: bold;
+ 
+ }
+ 
+ footer a {
+ text-decoration: none;
+ color: #ffffff;
+ transition: color 0.3s;
+ }
+
+ footer a:hover {
+ color: #000;
+ }
+ 
+ footer .a-propos {
+   width: 100%;
+   text-align: center;
+   margin-bottom: 10px;
+ }
+ 
+ footer .text-a-propos {
+   color: #fff9f9;
+   font-size: 16px;
+   font-weight: normal;
+ }
+ 
+ footer p {
+   width: 100%;
+   text-align: center;
+   color: #ffffff;
+   font-size: 13px;
+   margin-top: 10px;
+ }
