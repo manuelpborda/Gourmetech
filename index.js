@@ -128,3 +128,47 @@ document.querySelectorAll('.favori-btn').forEach((btn, index) => {
   });
 });
 
+
+//---------------------- filtres:  categories,  temps, difficulte:-----------------------------//
+const categorieSelect =document.getElementById ('catégorie-select');
+const tempsSelect = document.getElementById ('temps-select');
+const difficulteSelect = document.getElementById ('difficulte-select');
+const recettes =document.querySelectorAll('.recette');
+
+function filtrerRecettes () {
+  const categorie = categorieSelect.value;
+  const temps= tempsSelect.value;
+  const difficulte = difficulteSelect.value;
+
+  recettes.forEach(recette=> {
+    const recetteCategorie = recette.dataset.categorie;
+    const recetteTemps =parseInt ( recette.dataset.temps);
+    const recetteDifficulte =recette.dataset.difficulte;
+
+    let afficher =true;
+   
+    if (categorie && recetteCategorie !== categorie) {
+      afficher = false;
+  }
+
+  // Filtrar temps
+  if (temps) {
+      if (temps === "-15" && recetteTemps >= 15) afficher = false;
+      if (temps === "15-30" && (recetteTemps < 15 || recetteTemps > 30)) afficher = false;
+      if (temps === "30+" && recetteTemps <= 30) afficher = false;
+  }
+
+  // Filtrar difficulté
+  if (difficulte && recetteDifficulte !== difficulte) {
+      afficher = false;
+  }
+
+  recette.style.display = afficher ? 'block' : 'none';
+  
+  
+  })
+};
+categorieSelect.addEventListener('change', filtrerRecettes);
+tempsSelect.addEventListener('change', filtrerRecettes);
+difficulteSelect.addEventListener('change', filtrerRecettes);
+

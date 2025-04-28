@@ -31,22 +31,22 @@
     <input type="button" value="Rechercher" id="search-button">
     
     <div class="filtres">
-        <select>
-            <option class="Catégorie" value="">Catégorie</option>
+        <select id= "catégorie-select">
+            <option  value="">toutes les Catégories</option>
             <option value="entree">Entrée</option>
             <option value="plat">Plat</option>
             <option value="dessert">Dessert</option>
         </select>
 
-        <select>
-            <option class="temsPrepa" value="">Temps de préparation</option>
+        <select id ="temps-select">
+            <option value="">Temps de préparation</option>
             <option value="-15">Moins de 15 min</option>
             <option value="15-30">15-30 min</option>
             <option value="30+">Plus de 30 min</option>
         </select>
 
-        <select>
-            <option class="difficulté" value="">Difficulté</option>
+        <select id ="difficulte-select">
+            <option value="">Difficulté</option>
             <option value="facile">Facile</option>
             <option value="moyenne">Moyenne</option>
             <option value="difficile">Difficile</option>
@@ -57,31 +57,42 @@
 <div id="message-recherche"></div>
 
 <main class="grille-recettes">
-    <div class="recette">
-        <img src="Images/Gratin-Dauphinois.jpg" alt="Recette 1">
-        <h3>Gratin -Dauphinois</h3>
-        <p>Catégorie: Plat</p>
-        <p>Temps: 45 min</p>
-        <p>Difficulté: Moyenne</p>
+    <div class="recette" 
+     data-categorie="plat" 
+     data-temps="45" 
+     data-difficulte="moyenne">
+    <img src="Images/Gratin-Dauphinois.jpg" alt="Recette 1">
+    <h3>Gratin -Dauphinois</h3>
+    <p>Catégorie: Plat</p>
+    <p>Temps: 45 min</p>
+    <p>Difficulté: Moyenne</p>
+    <button class="favori-btn">❤️</button> 
+</div>
 
-        <button class="favori-btn">❤️</button> 
-    </div>
-    <div class="recette">
-        <img src="Images/tarte_aux_pommes.jpg" alt= "Recette 2">
-        <h3>Tarte Aux Pommes</h3>
-        <p> Catégorie: Dessert</p>
-        <p>Temps: 30 min</p>
-        <p>Difficulté: Facile</p>
-        <button class="favori-btn">❤️</button>
-    </div>
-    <div class="recette">
-        <img src="Images/lasagne-.jpg" alt="Recette 3">
-        <h3>lasagne</h3>
-        <p>Catégorie: plat</p>
-        <p>Temps: 30 min</p>
-        <p>Difficulté: Facile</p>
-        <button class="favori-btn">❤️</button>
-    </div>
+<div class="recette" 
+     data-categorie="dessert" 
+     data-temps="30" 
+     data-difficulte="facile">
+    <img src="Images/tarte_aux_pommes.jpg" alt="Recette 2">
+    <h3>Tarte Aux Pommes</h3>
+    <p>Catégorie: Dessert</p>
+    <p>Temps: 30 min</p>
+    <p>Difficulté: Facile</p>
+    <button class="favori-btn">❤️</button>
+</div>
+
+<div class="recette" 
+     data-categorie="plat" 
+     data-temps="30" 
+     data-difficulte="facile">
+    <img src="Images/lasagne-.jpg" alt="Recette 3">
+    <h3>Lasagne</h3>
+    <p>Catégorie: Plat</p>
+    <p>Temps: 30 min</p>
+    <p>Difficulté: Facile</p>
+    <button class="favori-btn">❤️</button>
+</div>
+
       
    <div class="recetteAleatoire"> 
       <button><a href="recettes_Aleatoires.html" target="_blank">recettes Aleatoires</a> </button>
