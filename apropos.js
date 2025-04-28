@@ -1,7 +1,11 @@
 window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
-  
+
+  document.getElementById('darkModeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".contact-form");
     const formMessage = document.getElementById("form-message");

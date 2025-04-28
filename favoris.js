@@ -2,6 +2,10 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
+  document.getElementById('darkModeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+
 // Cibler les éléments HTML
 const favoritesList = document.getElementById('favorites-list');
 const noFavoritesMessage = document.getElementById('no-favorites-message');

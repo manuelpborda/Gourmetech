@@ -19,6 +19,19 @@ body.loaded #loader {
   pointer-events: none;
 }
 
+.dark-mode-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
 header {
   background-color: orangered;
   padding: 30px;
@@ -111,7 +124,7 @@ body {
 #no-favorites-message {
   color: #888;
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 150px;
   text-align: center; 
 }
 .btn-recette {
@@ -135,5 +148,5 @@ footer {
   padding: 30px;
   background-color: orangered;
   color: white;
-  margin-top: 120px;
+  margin-top: 500px;
 }

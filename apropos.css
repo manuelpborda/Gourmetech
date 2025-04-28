@@ -19,6 +19,19 @@
     opacity: 0;
     pointer-events: none;
   }
+
+  .dark-mode-toggle {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   font-size: 24px;
+   cursor: pointer;
+ }
+ 
+ body.dark {
+   background-color: #121212;
+   color: white;
+ }
  
  header {
     background-color: orangered;
@@ -108,7 +121,7 @@
     background-color: transparent;
     border: none;
     font-size: 1.1em;
-    color: black;
+    color:white;
     cursor: pointer;
     text-align: left;
     padding: 8px 0;
@@ -123,12 +136,12 @@
     margin-top: 5px;
     padding-left: 10px;
     border-left: 2px solid #ccc;
-    color: black;
+    color: white;
  }
  footer {
     text-align: center;
     padding: 30px;
     background-color: orangered;
     color: white;
-    margin-top: 120px;
+    margin-top: 220px;
   }
