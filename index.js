@@ -10,7 +10,7 @@ const btn = document.getElementById("theme-toggle");
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       body.classList.add("dark");
-      btn.textContent = "Activer le mode clair";
+      btn.textContent = "☀️Light";
     }
 
     btn.addEventListener("click", () => {
@@ -80,7 +80,7 @@ const btn = document.getElementById("theme-toggle");
 });
 
 
-//----------------------button favoris --------------------------
+//----------------------button favoris --------------------------------------------------------------------------//
 // Fonction pour obtenir les favoris depuis localStorage
 function getFavorites() {
   const favoris = localStorage.getItem('favoris');
@@ -171,4 +171,14 @@ function filtrerRecettes () {
 categorieSelect.addEventListener('change', filtrerRecettes);
 tempsSelect.addEventListener('change', filtrerRecettes);
 difficulteSelect.addEventListener('change', filtrerRecettes);
+
+
+
+// Récupère le bouton hamburger et le menu de navigation   responsive -----//
+const hamburger = document.getElementById('hamburger');
+const menu = document.querySelector('nav');
+// Ajoute un événement de clic sur le hamburger pour activer/désactiver le menu
+hamburger.addEventListener('click', () => {
+ menu.classList.toggle('active');
+});
 

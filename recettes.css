@@ -167,6 +167,7 @@ nav a {
     border-radius: 10px;
 }
 
+
 /* ================= FOOTER ================= */
 footer {
    
@@ -223,3 +224,27 @@ footer p {
     font-size: 13px;
     margin-top: 10px;
 }
+
+
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+   }
+   @media (max-width:780px) {
+   nav {
+    display: none;
+   flex-direction: column;
+   width: 100%;
+   background-color: orangered;
+   padding: 10px 0;
+    }
+   nav.active {
+   display: flex;
+    }
+    .hamburger {
+    display: block;
+   
+    }
+   }

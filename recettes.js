@@ -18,10 +18,10 @@ const btn = document.getElementById("theme-toggle");
       // Mémorise le thème actuel
       if (body.classList.contains("dark")) {
         localStorage.setItem("theme", "dark");
-        btn.textContent = "Activer le mode clair";
+        btn.textContent = "☀️Light";
       } else {
         localStorage.setItem("theme", "light");
-        btn.textContent = "Activer le mode sombre";
+        btn.textContent = "🌙 Dark";
       }
     });
     window.onload = () => {
@@ -47,3 +47,44 @@ stars.forEach(function(star,index){
     }
 });
 });
+
+//----------------------button favoris --------------------------------------------------------------------------//
+// Fonction pour obtenir les favoris depuis localStorage
+
+// selectioner btn de la html
+const btnFavori = document.querySelector(".favori-btn");
+
+btnFavori.addEventListener("click", () => {
+    const recette = {
+        titre:document.querySelector("h2").textContent,
+        image: document.querySelector(".recette-image").getAttribute("src"),
+        categorie: document.querySelector(".info-recette p:nth-child(1)").textContent,
+        temps: document.querySelector(".info-recette p:nth-child(2)").textContent
+    };
+
+    // Vérifie si des favoris existent déjà
+    let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
+
+    // Empêche les doublons
+    if (!favoris.some(fav => fav.titre === recette.titre)) {
+        favoris.push(recette);
+        localStorage.setItem("favoris", JSON.stringify(favoris));
+        alert("Recette ajoutée aux favoris !");
+    } else {
+        alert("Cette recette est déjà dans vos favoris.");
+    }
+});
+
+
+
+
+
+// ------------------------------------Récupère le bouton hamburger et le menu de navigation ------  responsive -----//
+const hamburger = document.getElementById('hamburger');
+const menu = document.querySelector('nav');
+// Ajoute un événement de clic sur le hamburger pour activer/désactiver le menu
+hamburger.addEventListener('click', () => {
+ menu.classList.toggle('active');
+});
+
+
