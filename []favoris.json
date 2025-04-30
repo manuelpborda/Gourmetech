@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Recette des lasagnes",
+      "image": "photos/lasagne-.jpg",
+      "link": "recette_lasagnes.html"
+    },
+    {
+      "title": "Recette de la tarte aux pommes",
+      "image": "photos/tarte_aux_pommes.jpg",
+      "link": "recette_tarte_aux_pommes.html"
+    },
+    {
+      "title": "Recette du gratin dauphinois",
+      "image": "photos/Gratin-Dauphinois.jpg",
+      "link": "recette_gratin.html"
+    }
+  ]

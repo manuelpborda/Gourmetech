@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos</title>
+    <link rel="stylesheet" href="apropos.css">
+   
+</head>
+
+<body>
+    <div id="loader">Chargement...</div>
+<header>
+    <h1>GourmeTech - A propos</h1>
+    <img src="photos/logo.png" alt="logo"width="80">
+
+    <nav>
+    <a href="index.html">Accueil</a>
+    <a href="recettes.html">recettes</a>
+    <a href="favoris.html"> Favoris</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">☰ </div>
+
+    <div class="dark-mode-toggle" id="darkModeToggle"> 🌙</div>
+</header>
+
+   <main>
+
+    <section id="site-info">
+        <h1>A propos de notre sitee</h1>
+        <p>Bienvenue sur notre site! Nous proposons un espace d'echange ainsi que des ressources .</p>
+    </section>
+
+    <section class="contact">
+
+        <h2>Contactez-nous</h2>
+
+        <form class="contact-form" id="formulaire" novalidate>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name"placeholder="Entrez votre nom" required>
+            <span class="error">Incorrect</span>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre email"required>
+            <span class="error">Incorrect</span>
+         
+            <label for="message">Message :</label>
+            <textarea id="message" name="message"placeholder="Entrez votre message" required></textarea>
+            <span class="error">Incorrect</span>
+
+            <button type="submit">Envoyer</button>
+            <p id="form-message" class="hidden">Message envoyé avec succès !</p>
+        </form>
+    </section>
+    <section id="faq">
+        <h2>Foire aux questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">Comment fonctionne ce site ?</button>
+            <div class="faq-answer">
+                <p>Le site vous permet de consulter des articles, de poser vos questions et de participer aux discussions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Puis-je contribuer ?</button>
+            <div class="faq-answer">
+                <p>Oui, vous pouvez soumettre des articles ou répondre aux questions dans les forums après inscription.</p>
+            </div>
+        </div>
+       
+    </section>
+</main>
+
+<footer>
+    <div class="footer">
+        <ul>
+         <li><a href="index.html">Accueil</a></li>
+         <li><a href="recettes.html">Recettes</a></li>
+         <li><a href="favoris.html">Favoris</a></li>
+         <li><a href="apropos.html">À propos</a></li>
+        </ul>
+        <div class="p">
+            <p class="a-propos"> A propos de GourmeTech: </p>
+            <p class="text-a-propos"> GourmeTech est une plateforme de recettes culinaires interactive. developpée dans le cadre d'un projet pédagogique. </p> 
+         </div> 
+     </div>
+</footer>
+
+<script src="apropos.js"></script>
+</body>
+</html>

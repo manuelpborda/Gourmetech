@@ -1,0 +1,184 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= GENERAL ================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #131111;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* ================= DARK MODE ================= */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark .info-recette,
+body.dark .tiramisu,
+body.dark .Gratin {
+    box-shadow: 0 1px 12px rgba(255, 35, 35, 0.925);
+}
+
+body.dark .recette-image {
+    box-shadow: 0 10px 15px rgba(255, 225, 225, 0.671);
+}
+
+
+/* ================= HEADER ================= */
+header {
+    background-color: orangered;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+/* ================= NAVIGATION ================= */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ================= THÈME BUTTON ================= */
+#theme-toggle {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= RECETTE DETAIL ================= */
+.recette-detail {
+    margin-left: 25px;
+}
+
+.recette-image {
+    width: 35%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.info-recette {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 11px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= SUGGESTIONS ================= */
+.suggestions {
+    margin: 70px 20px 20px ;
+    margin-bottom: 140px;
+    
+}
+
+.grille-recettes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.recette {
+    width: 200px;
+    text-align: center;
+}
+
+.recette img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+   
+    background-color: orangered;
+    padding: 1px 5px ;
+    color: white;
+    text-align: center;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    margin-top: 45px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+footer ul li {
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+footer .a-propos {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .text-a-propos {
+    color: #fff9f9;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: 10px;
+}
