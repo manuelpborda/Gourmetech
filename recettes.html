@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recette - Lasagnes</title>
     <link rel="stylesheet" href="recettes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
 </head>
 <body>
-
+    <div id="loader">Chargement...</div>
 <header>
     <div class="header-container">
         <img src="Images/logo.png" alt="Logo GourmeTech" class="logo">
@@ -20,14 +21,15 @@
                 <li><a href="favoris.html">Favoris</a></li>
             </ul>
         </nav>
-       
+        <div class="hamburger" id="hamburger">☰ </div>
         <button id="theme-toggle">🌙</button> <!-- btn Changement de thème (clair/sombre)-->
 
     </div>
 </header>
 
 <main class="recette-detail">
-    <h2>Lasagnes à la bolognaise</h2>
+    
+    <h2> lasagne à la bolognaise</h2>
     <img src="Images/lasagne-.jpg" alt="Lasagnes" class="recette-image">
 
     <div class="info-recette">
@@ -64,6 +66,13 @@
             <li>Parsemer de fromage râpé.</li>
             <li>Faire cuire au four à 180°C pendant 30 minutes.</li>
         </ol>
+        <div class="rating"> Evaluez cette recette: 
+            <i class="bi bi-star-fill star"></i>
+            <i class="bi bi-star-fill star"></i>
+            <i class="bi bi-star-fill star"></i>
+            <i class="bi bi-star-fill star"></i> 
+            <i class="bi bi-star-fill star"></i>
+        </div>
     </section>
 
     <section class="suggestions">
@@ -81,6 +90,7 @@
                 <p>Catégorie: Plat</p> <br>
             </div>
         </div>
+        
     </section>
 </main>
 

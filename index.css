@@ -225,6 +225,21 @@ nav a:hover {
    cursor: pointer;
                 
 }
+/*---------------------favori btn-----------*/
+
+
+.favori-btn {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: grey; /* color par défaut */
+}       
+
+.favori-btn.favori {
+    color: red; /* couleur si en favori */
+}
 
 /* ================= FOOTER ================= */
 footer {
@@ -283,3 +298,26 @@ footer > p {
     color: #ffffff;
     margin-top: 20px;
 }
+
+
+.hamburger {
+     display: none;
+     font-size: 2rem;
+     cursor: pointer;
+    }
+    @media (max-width:780px) {
+    nav {
+     display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: orangered;
+    padding: 10px 0;
+     }
+    nav.active {
+    display: flex;
+     }
+     .hamburger {
+     display: block;
+    
+     }
+    }

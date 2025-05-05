@@ -3,7 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+     z-index: 9999;
+    transition: opacity 0.5s ease;
+   }
+   body.loaded #loader {
+    opacity:0;
+    pointer-events: none;
+   }
 /* ================= GENERAL ================= */
 body {
     margin: 0;
@@ -102,7 +120,30 @@ nav a {
     border-radius: 8px;
     box-shadow: 0 11px 15px rgba(0, 0, 0, 0.3);
 }
+ /*------------- etoiles------------------------*/
+ .rating{
+    display: flex;
 
+ }
+ body .rating{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
+ .star{
+    font-size: 32px;
+    color: #bbb;
+    transition: color 0.3s;
+    cursor: pointer;
+ }
+ .star:hover,
+ .star.checked {
+    color: gold;
+
+ }
 /* ================= SUGGESTIONS ================= */
 .suggestions {
     margin: 70px 20px 20px ;
@@ -125,6 +166,7 @@ nav a {
     width: 100%;
     border-radius: 10px;
 }
+
 
 /* ================= FOOTER ================= */
 footer {
@@ -182,3 +224,27 @@ footer p {
     font-size: 13px;
     margin-top: 10px;
 }
+
+
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+   }
+   @media (max-width:780px) {
+   nav {
+    display: none;
+   flex-direction: column;
+   width: 100%;
+   background-color: orangered;
+   padding: 10px 0;
+    }
+   nav.active {
+   display: flex;
+    }
+    .hamburger {
+    display: block;
+   
+    }
+   }
