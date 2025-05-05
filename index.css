@@ -225,6 +225,21 @@ nav a:hover {
    cursor: pointer;
                 
 }
+/*---------------------favori btn-----------*/
+
+
+.favori-btn {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: grey; /* color par défaut */
+}       
+
+.favori-btn.favori {
+    color: red; /* couleur si en favori */
+}
 
 /* ================= FOOTER ================= */
 footer {

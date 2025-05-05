@@ -12,7 +12,7 @@ function getFavorites() {
     return favoris ? JSON.parse(favoris) : [];
 }
 
-// Sauvegarder les favoris
+// Sauvegarder les favoris en local strage-//
 function saveFavorites(favoris) {
     localStorage.setItem('favoris', JSON.stringify(favoris));
 }

@@ -72,7 +72,7 @@ const btn = document.getElementById("theme-toggle");
   //event pour chercher avec le clavier entrée
   searchInput.addEventListener("keyup", function (event) {
       if (event.key === "Enter") {
-          filtrerRecettes();
+          filtrerRecettes(); 
           
       }
   });
@@ -114,17 +114,17 @@ document.querySelectorAll('.favori-btn').forEach((btn, index) => {
       const titre = recette.querySelector('h3').textContent;
       const image = recette.querySelector('img').getAttribute('src');
       
-      // Créons un lien vers une page individuelle (à adapter si tu n'as pas de pages individuelles)
+      // lien vers un page individuele-------------------------------//
       let lien = '#';
       if (titre.toLowerCase().includes("gratin")) {
           lien = 'Recette_gratin.html';
       } else if (titre.toLowerCase().includes("tarte")) {
           lien = 'recette_tarte_aux_pommes.html';
       } else if (titre.toLowerCase().includes("lasagne")) {
-          lien = 'recette_lasagnes.html';
+          lien = 'recette_lasagnes.html'; 
       }
 
-      ajouterAuxFavoris(titre, image, lien);
+      ajouterAuxFavoris(titre, image, lien); 
   });
 });
 
@@ -179,6 +179,7 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.querySelector('nav');
 // Ajoute un événement de clic sur le hamburger pour activer/désactiver le menu
 hamburger.addEventListener('click', () => {
- menu.classList.toggle('active');
+ menu.classList.toggle('active');  
+ 
 });
 

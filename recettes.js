@@ -9,7 +9,7 @@ const btn = document.getElementById("theme-toggle");
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       body.classList.add("dark");
-      btn.textContent = "Activer le mode clair";
+      btn.textContent = "☀️Light";
     }
 
     btn.addEventListener("click", () => {
@@ -55,12 +55,12 @@ stars.forEach(function(star,index){
 const btnFavori = document.querySelector(".favori-btn");
 
 btnFavori.addEventListener("click", () => {
-    const recette = {
-        titre:document.querySelector("h2").textContent,
-        image: document.querySelector(".recette-image").getAttribute("src"),
-        categorie: document.querySelector(".info-recette p:nth-child(1)").textContent,
-        temps: document.querySelector(".info-recette p:nth-child(2)").textContent
-    };
+  const recette = {
+    title: document.querySelector("h2").textContent,
+    image: document.querySelector(".recette-image").getAttribute("src"),
+    categorie: document.querySelector(".info-recette p:nth-child(1)").textContent,
+    temps: document.querySelector(".info-recette p:nth-child(2)").textContent
+};
 
     // Vérifie si des favoris existent déjà
     let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
